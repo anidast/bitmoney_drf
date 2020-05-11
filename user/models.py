@@ -9,4 +9,4 @@ class User(models.Model):
 	photo = models.ImageField(upload_to='photos', max_length=255, blank=True, null=True)
 
 	def __str__(self):
-		return self.nama
+		return str(self.userId) + ' - ' + self.name
