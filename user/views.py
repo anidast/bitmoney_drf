@@ -10,6 +10,6 @@ class UserView(ListCreateAPIView):
 	serializer_class = UserSerializer
 
 class UserRUDView(RetrieveUpdateDestroyAPIView):
-	lookup_field = 'userId'
+	lookup_field = 'email'
 	queryset = User.objects.all()
 	serializer_class = UserSerializer
