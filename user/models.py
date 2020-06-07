@@ -9,7 +9,7 @@ class User(AbstractBaseUser):
 	name = models.CharField(max_length = 255)
 	email = models.EmailField(unique = True)
 	password = models.CharField(max_length = 255)
-	balance = models.IntegerField(blank = True, null = True)
+	balance = models.IntegerField(blank = True, default = 0)
 	photo = models.ImageField(upload_to='photos', max_length=255, blank=True, null=True)
 	last_login = models.DateTimeField(verbose_name='last login', auto_now=True)
 	is_admin = models.BooleanField(default=False)
