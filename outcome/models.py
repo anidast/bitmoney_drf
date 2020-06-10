@@ -6,7 +6,7 @@ class Outcome(models.Model):
 	name = models.CharField(max_length = 255)
 	category = models.CharField(max_length = 255)
 	amount = models.IntegerField()
-	date = models.DateTimeField(blank = True, null = True)
+	date = models.CharField(max_length = 255, blank = True, null = True)
 	isPlan = models.BooleanField(default = False)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 

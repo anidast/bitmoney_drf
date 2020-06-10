@@ -5,7 +5,7 @@ class Income(models.Model):
 	incomeId = models.AutoField(auto_created=True, primary_key=True, editable=False)
 	name = models.CharField(max_length = 255)
 	amount = models.IntegerField()
-	date = models.DateTimeField()
+	date = models.CharField(max_length = 255)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
